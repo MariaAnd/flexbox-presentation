@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 6</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                margin: 0;
+            }
+
+            .wrapper {
+                text-align: center;
+                display:flex;
+                flex-flow: row wrap;                
+            }
+
+            .wrapper>* {
+                padding: 20px;
+                box-sizing: border-box;
+                flex: 1 0 100%;                
+            }
+
+            .header {
+                background: tomato;
+            }
+
+            .footer {
+                background: lightgreen;
+            }
+
+            .main {
+                background: deepskyblue;                
+            }
+
+            .aside-1 {
+                background: gold;
+            }
+
+            .aside-2 {
+                background: hotpink;
+            }
+
+            @media all and (min-width: 800px) {
+                .header{
+                    order:0;
+                }
+                .main{
+                    flex: 1 0 60%;
+                    order:2;
+                }
+                .aside-1, .aside-2{
+                    flex: 1 0 20%;
+                }
+
+                .aside-1{
+                    order:1;
+                }
+                .aside-2{
+                    order:3;
+                }
+                .footer{
+                    order:4;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <h1>Exercise 6 - Mobile-first 3-columns Layout</h1>
+            </header>
+            <article class="main">
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    Vestibulum
+                    tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+                    egestas
+                    semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            </article>
+            <aside class="aside aside-1">Aside Left</aside>
+            <aside class="aside aside-2">Aside Right</aside>
+            <footer class="footer">Footer</footer>
+        </div>
+    </body>
